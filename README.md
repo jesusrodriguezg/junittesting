@@ -1,18 +1,20 @@
 # junittesting
-Ejercicio de creación de una suite de testeo simultáneo de dos clases Java usando el framework JUnit. Realizado como parte de la asignatura de Entornos de Desarrollo del Ciclo Formativo de Desarrollo de Aplicaciones Web del IES Polígono Sur de Sevilla.
+Ejercicio de compilación de clases .java y ejecución de test con estructura Maven usando el framework JUnit. Realizado como parte de la asignatura de Entornos de Desarrollo del Ciclo Formativo de Desarrollo de Aplicaciones Web del IES Polígono Sur de Sevilla.
 
 ## Instrucciones
 
-1. Clonamos el repositorio.
+Para la ejecución de este testeo es preciso tener instalado Apache Maven. Puede descargarse en su web oficial. https://maven.apache.org/
+
+1. Clonamos el repositorio del proyecto.
 
   `$ git clone https://github.com/jesusrodriguezg/junittesting`
 
-2. Compilamos las clases. Para ello debemos ejecutar el compilador de Java (javac) desde la línea de comandos, indicándole como parámetros la ubicación de las clases .java y del archivo .JAR  de JUnit. Es preciso que la versión del framework sea la 4.8.1.
+2. Compilamos las clases.
 
-  `javac -cp /home/jesu/junit-jar/*:. *.java`
+  `$ mvn compile`
 
-3. Ejecutamos el test. Para ello, una vez que tengamos compìladas las clases, ejecutamos en la línea de comandos la clases JunitTestED indicando como parámetro la ubicación del framework JUnit y del paquete JUnitCore, como se indica a continuación.
+3. Ejecutamos el test.
 
-  `$ java -cp /home/jesu/junit-jar/*:. org.junit.runner.JUnitCore JunitTestED`
+  `$ mvn test`
 
-4. Comprobación de errores. Si los tests son adecuados, la línea de comandos deberá indicarnos que todas las comprobaciones han tenido éxitos. En caso contrario, indicará los correspondientes errores.
+4. Comprobación de errores. Si los tests son adecuados, la línea de comandos deberá indicarnos que todas las comprobaciones han tenido éxito. En caso contrario, indicará los correspondientes errores.
